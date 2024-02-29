@@ -1,42 +1,60 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+.stepper-container{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 60%;
+   padding: 40px;
+   height: 30%;
+   position: relative;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.stepper-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ 
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active .stepper-circle{
+   color: white;
+   background: rgb(15, 89, 201);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.complete .stepper-circle{
+   color: white;
+   background: #28a745;
 }
 
-.card {
-  padding: 2em;
+.stepper-circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50%;
+  border: 1px solid grey;
+  height:30px;
+  width:30px;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
 }
 
-.read-the-docs {
-  color: #888;
+.stepper-name{
+  padding-top: 10px;
+}
+.progress-bar{
+   position:absolute;
+   top:38%;
+   left: 0;
+   height: 4px;
+   background: #ccc;
+   z-index: -999;
+}
+
+.progress{
+  height: 100%;
+  background: #28a745;
+  transition: 0.2s ease;
 }
